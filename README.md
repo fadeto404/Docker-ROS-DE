@@ -1,5 +1,5 @@
 # Docker-ROS-DE
-Dockerfiles for building images for development with ROS2 and ROS1. GUI support and device access support (both unsafe) exist.
+Dockerfiles for building images for development with ROS2 and ROS1. ROS2 dockerfiles include the ROS1 bridge and ROS1 distribution for the respective ROS2 distributions. GUI support and device access support (both unsafe) exist.
 
 ## Building an image
 1. Clone this repo
