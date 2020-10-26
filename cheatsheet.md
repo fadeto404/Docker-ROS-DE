@@ -53,3 +53,48 @@ Make sure to replace the path name to your workspace
 **Preparing for running**
 ROS recommends running nodes in a different terminal from the one where you built the nodes
 `cd /workspaces/foxy && . install/setup.bash`
+
+# General docker
+## Running a container from an image
+```docker run <image-name>```
+Brug ```-d``` for at detache fra containerens stdout
+
+## List containers
+```docker ps``` eller ```docker container ls``` for at se kørende containers. Brug -a eller --all for at se alle containers inkl. dem der ikke kører
+
+## Stop a container
+```docker stop <id/container-name>```
+Returns the name if succesful 
+
+## Start a container
+```docker start <container>```
+Returns \<container> if succesful
+
+## Restart a running container
+```docker restart <container>```
+Returns \<container> if succesful
+
+## Delete a container
+```docker rm <id/container-name>```
+Removes a stopped container permanently
+Returns the name if succesful
+
+## List images
+```docker images``` eller ```docker image ls``` for at se downloadede images.
+
+## Delete an image
+```docker rmi <image-name>```
+Det er vigtigt at ingen containere baseret på dette image eksisterer. Fjern disse først hvis nogle findes.
+
+## Download an image
+```docker pull <image-name>``` for at downloade et image uden at kører en container
+```docker run <image-name>``` vil automatisk downloade et image hvis det ikke findes lokalt allerede
+
+## Execute a command on a running docker container
+```docker exec <container> <command>```
+Eksempelvis kan man bruge bash for at få adgang til en shell inden i containeren
+
+```docker exec -it <container> bash```
+
+## Attaching to a containers stdout
+```docker attach <container>```
