@@ -22,7 +22,7 @@ Enter the workspace directory
 `sudo docker run --env DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 --volume /tmp/.X11-unix:/tmp/.X11-unix --volume /path/to/my/ws:/ws --name <container_name> -it image_name:image_tag`
 replacing the `<container_name>` with a name of your choice, as well as the path and image.
 
-If you want the container to communicate with other containers, other programs running on the host, or with other computers on the network, ports will need to be opened. Probably this means ports 22222-22225 (UDP). See more here: 
+***If you want the container to communicate with other containers, other programs running on the host, or with other computers on the network***, ports will need to be opened. Probably this means ports 22222-22225 (UDP). See more here: 
 * [6.7. Listening Locators — Fast DDS 2.0.0 documentation](https://fast-rtps.docs.eprosima.com/en/latest/fastdds/transport/listening_locators.html)
 * [What default ports are used in ROS2 DDS implementations? - ROS Answers: Open Source Q&A Forum](https://answers.ros.org/question/295400/what-default-ports-are-used-in-ros2-dds-implementations/)
 * [How to run example talker/listener on 2 machines with different ipaddr? - Next Generation ROS - ROS Discourse](https://discourse.ros.org/t/how-to-run-example-talker-listener-on-2-machines-with-different-ipaddr/2106)
