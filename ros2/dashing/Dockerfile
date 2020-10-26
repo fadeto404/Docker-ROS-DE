@@ -40,7 +40,7 @@ RUN echo 'deb http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial
     && apt install ros-dashing-cv-bridge ros-dashing-message-filters ros-dashing-image-transport \
     && apt install libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev \
     && apt install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev \
-    && apt install 
+    && apt install \
     && rm -rf /var/lib/apt/lists/*
 
 # install rviz2
