@@ -6,6 +6,8 @@ Dockerfiles for building images for development with ROS2 and ROS1. ROS2 dockerf
 2. Open the directory of the distribution you want to build an image of
 3. Run `sudo docker build -t image_name:image_tag .` in that directory
 
+Image name and image tag are free of choice. I use: `ros:<distro>-ros1-bridge-de`.
+
 ## Creating a container
 _Do this only once!_
 ***For GUI and device support read the sections below before running the commands***
