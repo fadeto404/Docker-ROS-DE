@@ -19,9 +19,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # install ros2 packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ros-eloquent-ros1-bridge=0.8.2-1* \
-    ros-eloquent-demo-nodes-cpp=0.8.4-1* \
-    ros-eloquent-demo-nodes-py=0.8.4-1* \
+    ros-eloquent-ros1-bridge=0.8.2* \
+    ros-eloquent-demo-nodes-cpp=0.8.4* \
+    ros-eloquent-demo-nodes-py=0.8.4* \
     && rm -rf /var/lib/apt/lists/*
 
 # install downstream packages
@@ -40,7 +40,7 @@ RUN echo 'deb http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial
     && rm -rf /var/lib/apt/lists/*
 
 # install rviz2; NOTE: Compiling takes a long time ._.
-RUN apt install -y ros-eloquent-rviz2 \
+RUN apt update && apt install -y ros-eloquent-rviz2 \
     && export LD_LIBRARY_PATH=/opt/ros/eloquent/opt/rviz_ogre_vendor/lib:$LD_LIBRARY_PATH
 
 #RUN apt install -y libxaw7 libxaw7-dev libxaw7-dbg libogre-1.9-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev freeglut3 libgl1-mesa-dev libglu1-mesa-dev qt5-default ros-eloquent-yaml-cpp-vendor ros-eloquent-interactive-markers ros-eloquent-laser-geometry ros-eloquent-map-msgs \
